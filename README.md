@@ -41,7 +41,7 @@ Now that we have our foundation set up, let's start building out our ecommerce A
         * create a `.gitignore` file in the root of the directory
             * add `node_modules/` to your .gitignore
 * Next, build the skeleton of your server
-    * This should include:
+    * This should include: 
         * Requiring express
         * Declaring your `app` variable and setting it equal to express invoked
         * Declaring the port you want your server to `listen` on
@@ -56,7 +56,7 @@ Now that we have our foundation set up, let's start building out our ecommerce A
             * You should see the `console.log` message from your `listen` method in the console
 
     ### Solution
-    <details>
+    <details>ser
 
     <summary><code> server/index.js </code></summary>
 
@@ -267,8 +267,8 @@ At this point, we have a fairly solid API. We can retrieve all of our data from 
 const products = require('../products.json');
 
 const getProducts = (req, res) => {
-    if (req.query.price) {
-        const items = products.filter(val => val.price >= parseInt(req.query.price));
+    if(req.query.price) {
+        const items = products.filter(val => val.price >=  parseInt(req.query.price));
         return res.status(200).send(items);
     }
     res.status(200).send(products);
